@@ -1,0 +1,18 @@
+ 
+============================================================
+=====     Queued job information at submit time        =====
+============================================================
+  The submitted file is: run_hello.sh
+  The time limit is 01:00:00 HH:MM:SS.
+  The target directory is: /home/ualclsd0190/Fall2024_CS481_HW5/examples
+  The memory limit is: 1gb
+  The job will start running after: 202411241936.09
+  Job Name: runhelloshGPU
+  Queue: -q gpu
+  Constraints: 
+  Command typed:
+/scripts/run_gpu run_hello.sh     
+  Queue submit command:
+qsub -q gpu -j oe -N runhelloshGPU -a 202411241936.09 -r n -M cgphornroekngam@crimson.ua.edu -l walltime=01:00:00 -l select=1:ngpus=1:ncpus=1:mpiprocs=1:mem=1000mb 
+  Job number: 214411
+ 
