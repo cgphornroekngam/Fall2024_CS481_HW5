@@ -1,0 +1,43 @@
+setting asax scratch directory
+ 
+============================================================
+=====         Summary of your GPU job                  =====
+============================================================
+  The script file is: run_hw5-GPU.sh
+  The time limit is 01:00:00 HH:MM:SS.
+  The target directory is: /home/ualclsd0190/Fall2024_CS481_HW5/shared-memory
+  The working directory is:  /scratch-local/ualclsd0190.runhw5GPUshGPU.215074.asax-pbs1
+  The memory limit is: 1gb
+  The job will start running after: 202411261702.29
+  Job Name: runhw5GPUshGPU
+  Queue: -q classgpu
+  Constraints: 
+  Using  1  cores on master node  asaxg002.asc.edu
+  Node list:  asaxg002.asc.edu
+  Cores:  1
+  Command typed:
+/scripts/run_gpu run_hw5-GPU.sh     
+  Queue submit command:
+qsub -q classgpu -j oe -N runhw5GPUshGPU -a 202411261702.29 -r n -M cgphornroekngam@crimson.ua.edu -l walltime=01:00:00 -l select=1:ngpus=1:ncpus=1:mpiprocs=1:mem=1000mb 
+ 
+Tue Nov 26 17:02:36 2024       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 560.28.03              Driver Version: 560.28.03      CUDA Version: 12.6     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA A100-SXM4-40GB          On  |   00000000:01:00.0 Off |                    0 |
+| N/A   35C    P0             54W /  400W |       1MiB /  40960MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI        PID   Type   Process name                              GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+Program ran successfully. Final matrix saved to output.txt.
