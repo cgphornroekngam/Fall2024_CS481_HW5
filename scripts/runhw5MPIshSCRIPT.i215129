@@ -1,0 +1,18 @@
+ 
+============================================================
+=====     Queued job information at submit time        =====
+============================================================
+  The submitted file is: run_hw5-MPI.sh
+  The time limit is 12:00:00 HH:MM:SS.
+  The target directory is: /home/ualclsd0190/Fall2024_CS481_HW5/scripts
+  The memory limit is: 20gb
+  The job will start running after: 202411261805.27
+  Job Name: runhw5MPIshSCRIPT
+  Queue: -q class -W group_list=classq
+  Constraints: 
+  Command typed:
+/scripts/run_script run_hw5-MPI.sh     
+  Queue submit command:
+qsub -q class -W group_list=classq -j oe -N runhw5MPIshSCRIPT -a 202411261805.27 -r n -M cgphornroekngam@crimson.ua.edu -l walltime=12:00:00 -l select=ncpus=20:mpiprocs=20:mem=20000mb 
+  Job number: 215129
+ 

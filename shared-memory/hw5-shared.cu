@@ -87,13 +87,18 @@ void updateGhostCells(int *grid, int rows, int cols) {
     grid[(rows + 1) * (cols + 2) + (cols + 1)] = grid[(1) * (cols + 2) + cols];  // Bottom-right corner
 }
 
-int main() {
+int main(int argc, char **argv) {
+    if (argc != 4) {
+        printf("Usage: %s <matrix_size> <max_iterations> <output_file>\n", argv[0]);
+        exit(-1);
+    }
+
     double starttime = gettime();
     srand(100);
 
-    int rows = 50;
-    int cols = 50;
-    int iterations = 100;
+    int rows = atoi(argv[1]);
+    int cols = rows;
+    int iterations = atoi(argv[2]);
 
     int *h_current, *h_next;
     int *d_current, *d_next;
@@ -143,7 +148,7 @@ int main() {
     double endtime = gettime();
 
     // Save final board to file
-    FILE *outFile = fopen("output.txt", "w");
+    FILE *outFile = fopen(argv[3], "w");
     if (outFile == NULL) {
         fprintf(stderr, "Error opening file for writing.\n");
         return -1;
@@ -165,6 +170,6 @@ int main() {
     free(h_current);
     free(h_next);
 
-    printf("Program ran successfully. Final matrix saved to output.txt.\n");
+    printf("Program ran successfully. Final matrix saved to %s.\n", argv[3]);
     return 0;
 }

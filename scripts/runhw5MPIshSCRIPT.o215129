@@ -1,0 +1,21 @@
+setting asax scratch directory
+ 
+============================================================
+=====         Summary of your script job               =====
+============================================================
+  The script file is: run_hw5-MPI.sh
+  The time limit is 12:00:00 HH:MM:SS.
+  The target directory is: /home/ualclsd0190/Fall2024_CS481_HW5/scripts
+  The working directory is:  /scratch-local/ualclsd0190.runhw5MPIshSCRIPT.215129.asax-pbs1
+  The memory limit is: 20gb
+  The job will start running after: 202411261805.27
+  Job Name: runhw5MPIshSCRIPT
+  Queue: -q class -W group_list=classq
+  Constraints: 
+  Using  20  cores on master node  asax020.asc.edu
+  Node list:  asax020.asc.edu asax020.asc.edu asax020.asc.edu asax020.asc.edu asax020.asc.edu asax020.asc.edu asax020.asc.edu asax020.asc.edu asax020.asc.edu asax020.asc.edu asax020.asc.edu asax020.asc.edu asax020.asc.edu asax020.asc.edu asax020.asc.edu asax020.asc.edu asax020.asc.edu asax020.asc.edu asax020.asc.edu asax020.asc.edu
+  Cores:  20
+  Command typed:
+/scripts/run_script run_hw5-MPI.sh     
+  Queue submit command:
+qsub -q class -W group_list=classq -j oe -N runhw5MPIshSCRIPT -a 202411261805.27 -r n -M cgphornroekngam@crimson.ua.edu -l walltime=12:00:00 -l select=ncpus=20:mpiprocs=20:mem=20000mb 

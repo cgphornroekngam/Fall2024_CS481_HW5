@@ -5,10 +5,10 @@ setting asax scratch directory
 ============================================================
   The script file is: run_hw5-GPU.sh
   The time limit is 01:00:00 HH:MM:SS.
-  The target directory is: /home/ualclsd0190/Fall2024_CS481_HW5/shared-memory
-  The working directory is:  /scratch-local/ualclsd0190.runhw5GPUshGPU.215074.asax-pbs1
-  The memory limit is: 1gb
-  The job will start running after: 202411261702.29
+  The target directory is: /home/ualclsd0190/Fall2024_CS481_HW5/scripts
+  The working directory is:  /scratch-local/ualclsd0190.runhw5GPUshGPU.215149.asax-pbs1
+  The memory limit is: 4gb
+  The job will start running after: 202411261817.42
   Job Name: runhw5GPUshGPU
   Queue: -q classgpu
   Constraints: 
@@ -18,9 +18,9 @@ setting asax scratch directory
   Command typed:
 /scripts/run_gpu run_hw5-GPU.sh     
   Queue submit command:
-qsub -q classgpu -j oe -N runhw5GPUshGPU -a 202411261702.29 -r n -M cgphornroekngam@crimson.ua.edu -l walltime=01:00:00 -l select=1:ngpus=1:ncpus=1:mpiprocs=1:mem=1000mb 
+qsub -q classgpu -j oe -N runhw5GPUshGPU -a 202411261817.42 -r n -M cgphornroekngam@crimson.ua.edu -l walltime=01:00:00 -l select=1:ngpus=1:ncpus=1:mpiprocs=1:mem=4000mb 
  
-Tue Nov 26 17:02:36 2024       
+Tue Nov 26 18:17:52 2024       
 +-----------------------------------------------------------------------------------------+
 | NVIDIA-SMI 560.28.03              Driver Version: 560.28.03      CUDA Version: 12.6     |
 |-----------------------------------------+------------------------+----------------------+
@@ -28,8 +28,8 @@ Tue Nov 26 17:02:36 2024
 | Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
 |                                         |                        |               MIG M. |
 |=========================================+========================+======================|
-|   0  NVIDIA A100-SXM4-40GB          On  |   00000000:01:00.0 Off |                    0 |
-| N/A   35C    P0             54W /  400W |       1MiB /  40960MiB |      0%      Default |
+|   0  NVIDIA A100-SXM4-40GB          On  |   00000000:41:00.0 Off |                    0 |
+| N/A   27C    P0             48W /  400W |       1MiB /  40960MiB |      0%      Default |
 |                                         |                        |             Disabled |
 +-----------------------------------------+------------------------+----------------------+
                                                                                          
@@ -40,4 +40,9 @@ Tue Nov 26 17:02:36 2024
 |=========================================================================================|
 |  No running processes found                                                             |
 +-----------------------------------------------------------------------------------------+
-Program ran successfully. Final matrix saved to output.txt.
+Program ran successfully. Final matrix saved to /scratch/ualclsd0190/hw5/GPU/5000-5000a.txt.
+Program ran successfully. Final matrix saved to /scratch/ualclsd0190/hw5/GPU/5000-5000b.txt.
+Program ran successfully. Final matrix saved to /scratch/ualclsd0190/hw5/GPU/5000-5000c.txt.
+Program ran successfully. Final matrix saved to /scratch/ualclsd0190/hw5/GPU/10000-5000a.txt.
+Program ran successfully. Final matrix saved to /scratch/ualclsd0190/hw5/GPU/10000-5000b.txt.
+Program ran successfully. Final matrix saved to /scratch/ualclsd0190/hw5/GPU/10000-5000c.txt.
